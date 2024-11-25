@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Work+Sans:wght@100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-poppins: "Poppins", sans-serif;
+  --font-work-sans: "Work Sans", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-white font-sans text-text-p text-base;
+  }
+}
+
+@layer components {
+  .button-primary {
+    @apply bg-[#4f5de4] hover:bg-[#3b49c1] text-white py-2 px-4 rounded;
+  }
+
+  .button-secondary {
+    @apply bg-[#f57005] hover:bg-[#d45c04] text-white py-2 px-4 rounded;
+  }
+}
