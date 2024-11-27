@@ -35,7 +35,6 @@ import {
   faPersonChalkboard,
   faLightbulb,
   faHandshake,
-  faChartLine,
 } from "@fortawesome/free-solid-svg-icons";
 
 import {

@@ -23,6 +23,7 @@ const AbundantQuestionBank = lazy(() =>
 );
 const AISupport = lazy(() => import("./components/AISupport"));
 const Testimonial = lazy(() => import("./components/Testimonial"));
+const OurCourses = lazy(() => import("./components/OurCourses"));
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
         <Mobile />
         <PracticeMode />
         <AmazingFeatures />
+        <OurCourses />
         <ExamPlatform />
         <WhyStudy />
         <Category />

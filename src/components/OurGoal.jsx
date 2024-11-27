@@ -45,14 +45,18 @@ const OurGoal = () => {
             {goal.map((item) => (
               <div
                 key={item.id}
-                className="relative z-20 overflow-hidden bg-white text-black p-6 rounded-lg shadow-lg hover:text-white transition-all duration-500 ease-in-out hover:bg-transparent">
+                className="relative z-20 overflow-hidden bg-white text-black p-6 rounded-2xl shadow-lg hover:text-secondary transition-all duration-500 ease-in-out hover:bg-transparent">
                 <div className="relative z-20 flex flex-col items-center">
                   <FontAwesomeIcon
                     icon={item.icon}
-                    className="text-4xl text-secondary mb-4"
+                    className="text-[60px] text-secondary mt-8 mb-4"
                   />
-                  <h4 className="font-semibold text-xl mb-2 ">{item.title}</h4>
-                  <p className="text-center">{item.text}</p>
+                  <h4 className="font-workSans font-bold text-xl mb-4">
+                    {item.title}
+                  </h4>
+                  <p className="font-workSans text-text-p text-center mb-6 font-medium max-w-[230px]">
+                    {item.text}
+                  </p>
                 </div>
                 {/* <div className="absolute inset-0 z-0">
                   <div className="absolute inset-0">
