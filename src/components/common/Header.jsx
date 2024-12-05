@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import { pcLogo } from "../assets";
-import { layout } from "../style";
+import { Link, NavLink } from "react-router-dom";
+import { pcLogo } from "../../assets";
+import { layout } from "../../style";
 
 const Header = () => {
   const [bgColor, setBgColor] = useState(false);
@@ -48,15 +49,29 @@ const Header = () => {
           </a>
         </div>
         <nav className="flex items-center space-x-4">
-          <a
-            href="#"
-            className="font-poppins text-black text-[16px] cursor-pointer transition-colors duration-500 hover:text-secondary"
+          <NavLink
+            to="/schools"
+            className={({ isActive }) =>
+              isActive
+                ? "hidden xl:inline-block text-white bg-[#20419A] text-sm sm:text-[15px] font-poppins font-semibold px-2.5 sm:px-5 py-2 sm:py-2.5 rounded-md cursor-pointer transition-colors duration-500 hover:bg-[#4f5de4]"
+                : "font-poppins text-black text-[16px] cursor-pointer transition-colors duration-500 hover:text-secondary"
+            }
             aria-label="For Schools">
             For Schools
-          </a>
-          <button className="hidden xl:inline-block text-white bg-[#20419A] text-sm sm:text-[15px] font-poppins font-semibold px-2.5 sm:px-5 py-2 sm:py-2.5 rounded-md cursor-pointer transition-colors duration-500 hover:bg-[#4f5de4]">
+          </NavLink>
+          <NavLink
+            to="/#"
+            className={({ isActive }) =>
+              isActive
+                ? "hidden xl:inline-block text-white bg-[#20419A] text-sm sm:text-[15px] font-poppins font-semibold px-2.5 sm:px-5 py-2 sm:py-2.5 rounded-md cursor-pointer transition-colors duration-500 hover:bg-[#4f5de4]"
+                : "font-poppins text-black text-[16px] cursor-pointer transition-colors duration-500 hover:text-secondary"
+            }
+            aria-label="For Schools">
             For Students
-          </button>
+          </NavLink>
+          {/* <button className="hidden xl:inline-block text-white bg-[#20419A] text-sm sm:text-[15px] font-poppins font-semibold px-2.5 sm:px-5 py-2 sm:py-2.5 rounded-md cursor-pointer transition-colors duration-500 hover:bg-[#4f5de4]">
+            For Students
+          </button> */}
         </nav>
       </div>
     </header>

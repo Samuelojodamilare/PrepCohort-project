@@ -1,7 +1,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { categoryBg } from "../assets";
-import { category } from "../constant";
-import { layout } from "../style";
+import { categoryBg } from "../../assets";
+import { category } from "../../constant";
+import { layout } from "../../style";
+import { frontendUrl } from "../../services/graphqlClient";
 
 const Category = () => {
   return (
@@ -30,21 +31,23 @@ const Category = () => {
         </div>
         <div className="grid gap-6 0.5xl:grid-cols-1 md:grid-cols-2 xl:grid-cols-4 pb-5">
           {category.map((item) => (
-            <div
-              key={item.id}
-              className={`${item.size} md:px-[18px] px-3 relative bg-cover bg-center bg-no-repeat overflow-hidden`}
-              style={{ backgroundImage: `url(${item.image})` }}>
-              <div className="absolute inset-0 bg-text-h/75"></div>
-              <div className="relative z-10 flex flex-col items-center justify-center h-full">
-                <FontAwesomeIcon
-                  icon={item.icon}
-                  className="text-secondary text-[60px] mb-5 "
-                />
-                <h3 className="text-[24px] text-white leading-[30px] font-bold">
-                  {item.title}
-                </h3>
+            <a href={`${frontendUrl}/explore`} key={item.id}>
+              <div
+                key={item.id}
+                className={`${item.size} md:px-[18px] px-3 relative bg-cover bg-center bg-no-repeat overflow-hidden`}
+                style={{ backgroundImage: `url(${item.image})` }}>
+                <div className="absolute inset-0 bg-text-h/75"></div>
+                <div className="relative z-10 flex flex-col items-center justify-center h-full">
+                  <FontAwesomeIcon
+                    icon={item.icon}
+                    className="text-secondary text-[60px] mb-5 "
+                  />
+                  <h3 className="text-[24px] text-white leading-[30px] font-bold hover:text-secondary transition-color duration-500 ease-in-out">
+                    {item.title}
+                  </h3>
+                </div>
               </div>
-            </div>
+            </a>
           ))}
           {/* <div
             className="h-24 w-full xl:h-24 xl:w-24 bg-cover bg-center bg-no-repeat"

@@ -1,5 +1,5 @@
-import { mobilePhone, playstoreImg } from "../assets";
-import { layout } from "../style";
+import { mobilePhone, playstoreImg } from "../../assets";
+import { layout } from "../../style";
 
 const Mobile = () => {
   return (

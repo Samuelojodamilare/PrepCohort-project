@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { amazingImg } from "../assets";
-import { layout } from "../style";
-import Button from "./Button";
-import { amazing, Mamazing } from "../constant";
+import { amazingImg } from "../../assets";
+import { layout } from "../../style";
+import Button from "./../common/Button";
+import { amazing, Mamazing } from "../../constant";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const AmazingFeatures = () => {

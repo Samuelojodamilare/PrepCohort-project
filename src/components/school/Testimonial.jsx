@@ -1,11 +1,11 @@
 import { useEffect, useRef, useState } from "react";
-import { layout } from "../style";
+import { layout } from "../../style";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import { testimonials } from "../constant";
-import TestimonialCard from "./TestimonialCard";
+import { testimonials } from "../../constant";
+import TestimonialCard from "../students/TestimonialCard";
 
 const Testimonial = () => {
   const sliderRef = useRef(null);
@@ -65,23 +65,13 @@ const Testimonial = () => {
   return (
     <section className={`${layout.section} bg-bg-m`}>
       <div className={`${layout.container}`}>
-        <div className="flex flex-col text-center 0.5xl:mb-[50px] mb-[30px] pt-16">
-          <h2 className="font-workSans text-primary font-bold text-[24px] leading-[26px] mb-[11px]">
-            Testimonial
-            <svg
-              className="relative inline-block w-[55px] overflow-hidden ml-[9px] fill-secondary"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 55 13">
-              <g clipPath="url(#clip0_324_36194)">
-                <path d="M10.5406 6.49995L0.700562 12.1799V8.56995L4.29056 6.49995L0.700562 4.42995V0.819946L10.5406 6.49995Z"></path>
-                <path d="M25.1706 6.49995L15.3306 12.1799V8.56995L18.9206 6.49995L15.3306 4.42995V0.819946L25.1706 6.49995Z"></path>
-                <path d="M39.7906 6.49995L29.9506 12.1799V8.56995L33.5406 6.49995L29.9506 4.42995V0.819946L39.7906 6.49995Z"></path>
-                <path d="M54.4206 6.49995L44.5806 12.1799V8.56995L48.1706 6.49995L44.5806 4.42995V0.819946L54.4206 6.49995Z"></path>
-              </g>
-            </svg>
-          </h2>
-          <p className="font-workSans font-bold text-[30px] 0.5xl:text-[40px] leading-[47px] text-text-h">
-            What Our Students are Saying
+        <div className="flex flex-col items-center mb-8">
+          <h3 className="font-workSans text-text-h font-bold text-[40px] leading-[26px] mb-[11px]">
+            What we offer
+          </h3>
+          <p className="font-workSans text-lg text-text-c">
+            We provide innovative, comprehensive and user-friendly tools that
+            empowers schools run effectively
           </p>
         </div>
         <Slider {...settings} ref={sliderRef}>
@@ -89,7 +79,7 @@ const Testimonial = () => {
             <TestimonialCard key={testimonial.id} testimonial={testimonial} />
           ))}
         </Slider>
-        <div className="relative flex justify-center z-20">
+        <div className="relative flex justify-center z-20 mt-5">
           <PrevArrow onClick={() => sliderRef.current.slickPrev()} />
           <NextArrow onClick={() => sliderRef.current.slickNext()} />
         </div>

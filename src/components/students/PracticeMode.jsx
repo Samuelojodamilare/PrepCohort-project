@@ -1,6 +1,6 @@
-import { practiceBg, practiceDesign } from "../assets";
-import { layout } from "../style";
-import Button from "./Button";
+import { practiceBg, practiceDesign } from "../../assets";
+import { layout } from "../../style";
+import Button from "./../common/Button";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 

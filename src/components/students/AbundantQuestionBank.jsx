@@ -1,6 +1,6 @@
-import { questionBankImg } from "../assets";
-import { layout } from "../style";
-import Button from "./Button";
+import { questionBankImg } from "../../assets";
+import { layout } from "../../style";
+import Button from "./../common/Button";
 const AbundantQuestionBank = () => {
   return (
     <section className={`${layout.section}`}>

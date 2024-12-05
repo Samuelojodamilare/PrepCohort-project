@@ -1,6 +1,6 @@
-import { AIImg } from "../assets";
-import { layout } from "../style";
-import Button from "./Button";
+import { AIImg } from "../../assets";
+import { layout } from "../../style";
+import Button from "./../common/Button";
 const AISupport = () => {
   return (
     <section className={`${layout.section}`}>

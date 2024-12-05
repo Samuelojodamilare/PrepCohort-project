@@ -1,6 +1,7 @@
-import { StrictMode } from 'react'
-import { renderToPipeableStream } from 'react-dom/server'
-import App from './App'
+import { StrictMode } from "react";
+import { renderToPipeableStream } from "react-dom/server";
+import { StaticRouter } from "react-router-dom";
+import App from "./App";
 
 /**
  * @param {string} url
@@ -8,10 +9,13 @@ import App from './App'
  * @param {import('react-dom/server').RenderToPipeableStreamOptions} [options]
  */
 export function render(url, ssrManifest, options) {
+  const context = {};
   return renderToPipeableStream(
     <StrictMode>
-      <App />
+      <StaticRouter location={url} context={context}>
+        <App />
+      </StaticRouter>
     </StrictMode>,
-    options,
-  )
+    options
+  );
 }

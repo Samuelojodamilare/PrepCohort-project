@@ -1,52 +1,64 @@
-import { Suspense, lazy } from "react";
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import Footer from "./components/Footer";
+import React, { Suspense, lazy, useEffect, useState } from "react";
+import { ApolloProvider } from "@apollo/client";
+import ApolloClientInstance from "./services/graphqlClient";
+import Header from "./components/common/Header";
+import Footer from "./components/common/Footer";
 
-// Works also with SSR as expected
-const Card = lazy(() => import("./Card"));
-const OurGoal = lazy(() => import("./components/OurGoal"));
-const Mobile = lazy(() => import("./components/Mobile"));
-const PracticeMode = lazy(() => import("./components/PracticeMode"));
-const AmazingFeatures = lazy(() => import("./components/AmazingFeatures"));
-const ExamPlatform = lazy(() => import("./components/ExamPlatform"));
-const WhyStudy = lazy(() => import("./components/WhyStudy"));
-const Category = lazy(() => import("./components/Category"));
-const InterwovenPractice = lazy(() =>
-  import("./components/InterwovenPractice")
-);
-const QualifiedInstructor = lazy(() =>
-  import("./components/QualifiedInstructor")
-);
-const AbundantQuestionBank = lazy(() =>
-  import("./components/AbundantQuestionBank")
-);
-const AISupport = lazy(() => import("./components/AISupport"));
-const Testimonial = lazy(() => import("./components/Testimonial"));
-const OurCourses = lazy(() => import("./components/OurCourses"));
+// Lazy load pages
+const PageOne = lazy(() => import("./pages/PageOne"));
+const PageTwo = lazy(() => import("./pages/PageTwo"));
 
-function App() {
+const ErrorBoundary = ({ children }) => {
+  try {
+    return <>{children}</>;
+  } catch (error) {
+    return <p>Something went wrong!</p>;
+  }
+};
+
+function App({ location }) {
+  const [RouterComponent, setRouterComponent] = useState(null);
+  const [RoutesComponent, setRoutesComponent] = useState(null);
+
+  useEffect(() => {
+    const loadComponents = async () => {
+      // Dynamically import Router based on the environment
+      const { StaticRouter } = await import("react-router-dom");
+      const { BrowserRouter } = await import("react-router-dom");
+      const { Routes, Route } = await import("react-router-dom");
+
+      if (typeof window === "undefined") {
+        setRouterComponent(() => StaticRouter);
+      } else {
+        setRouterComponent(() => BrowserRouter);
+      }
+
+      setRoutesComponent(() => ({ Routes, Route }));
+    };
+
+    loadComponents();
+  }, []);
+
+  if (!RouterComponent || !RoutesComponent) {
+    // Render loading state until all components are loaded
+    return <p>Loading...</p>;
+  }
+
+  const { Routes, Route } = RoutesComponent;
+
   return (
-    <>
-      <Header />
-      <Hero />
-      <Suspense fallback={<p>Loading section...</p>}>
-        <OurGoal />
-        <Mobile />
-        <PracticeMode />
-        <AmazingFeatures />
-        <OurCourses />
-        <ExamPlatform />
-        <WhyStudy />
-        <Category />
-        <InterwovenPractice />
-        <QualifiedInstructor />
-        <AbundantQuestionBank />
-        <AISupport />
-        <Testimonial />
-      </Suspense>
-      <Footer />
-    </>
+    <ApolloProvider client={ApolloClientInstance}>
+      <RouterComponent location={location} context={{}}>
+        <Header />
+        <Suspense fallback={<p>Loading section...</p>}>
+          <Routes>
+            <Route path="/" element={<PageOne />} />
+            <Route path="/schools" element={<PageTwo />} />
+          </Routes>
+        </Suspense>
+        <Footer />
+      </RouterComponent>
+    </ApolloProvider>
   );
 }
 

@@ -1,10 +1,9 @@
 import { useLazyQuery, useQuery } from "@apollo/client";
 import SEARCH_ENGINE from "../queries/Search";
-import { ERROR_POLICY, FETCH_POLICY } from "../../interfaces/index";
 import SearchFilterBuilder from "../../libs/search-engine-filters";
 
 export const useSearchService = ({
-  fetchPolicy = FETCH_POLICY.CACHE_AND_NETWORK,
+  fetchPolicy = "cache-and-network",
   notifyOnNetworkStatusChange = true,
   ...restOfProps
 }) => {
@@ -27,7 +26,7 @@ export const useSearchService = ({
 
     const res = await getSearch({
       variables: { ...searchParams, ...customVariables },
-      errorPolicy: ERROR_POLICY.ALL,
+      errorPolicy: "all",
     });
 
     return res;
@@ -40,21 +39,21 @@ export const useSearchService = ({
   };
 };
 
-export const useSearchEngine = ({
-  fetchPolicy = FETCH_POLICY.CACHE_AND_NETWORK,
-  notifyOnNetworkStatusChange = true,
-  ...restOfProps
-}) => {
-  const [getSearchEngine, lazySearchState] = useLazyQuery(SEARCH_ENGINE, {
-    fetchPolicy,
-    notifyOnNetworkStatusChange,
-    ...restOfProps,
-  });
+// export const useSearchEngine = ({
+//   fetchPolicy = "cache-and-network",
+//   notifyOnNetworkStatusChange = true,
+//   ...restOfProps
+// }) => {
+//   const [getSearchEngine, lazySearchState] = useLazyQuery(SEARCH_ENGINE, {
+//     fetchPolicy,
+//     notifyOnNetworkStatusChange,
+//     ...restOfProps,
+//   });
 
-  return {
-    getSearchEngine,
-    ...lazySearchState,
-  };
-};
+//   return {
+//     getSearchEngine,
+//     ...lazySearchState,
+//   };
+// };
 
 export default useSearchService;

@@ -1,6 +1,6 @@
-import { interwovenImg } from "../assets";
-import { layout } from "../style";
-import Button from "./Button";
+import { interwovenImg } from "../../assets";
+import { layout } from "../../style";
+import Button from "./../common/Button";
 const InterwovenPractice = () => {
   return (
     <section className={`${layout.section}`}>

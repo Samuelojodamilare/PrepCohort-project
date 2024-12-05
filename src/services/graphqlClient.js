@@ -55,14 +55,12 @@ const errorLink = onError(({ networkError, graphQLErrors }) => {
       if (message === "TokenExpiredError: jwt expired") {
       }
       if (message === "Not authorized.") {
-        // console.log("Nottt");
       }
     });
   }
 });
 
 const link = ApolloLink.from([errorLink, retryLink, httpLink]);
-// const link = ApolloLink.from([errorLink, retryLink, authLink, splitLink]);
 
 const ApolloClientInstance = new ApolloClient({
   link,

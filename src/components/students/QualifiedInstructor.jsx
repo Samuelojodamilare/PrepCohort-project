@@ -1,6 +1,6 @@
-import { instructorImg } from "../assets";
-import { layout } from "../style";
-import Button from "./Button";
+import { instructorImg } from "../../assets";
+import { layout } from "../../style";
+import Button from "./../common/Button";
 
 const QualifiedInstructor = () => {
   return (

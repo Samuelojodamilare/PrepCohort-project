@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { footerBg, pcLogo } from "../assets";
-import { footer, socials } from "../constant";
-import { layout } from "../style";
+import { footerBg, pcLogo } from "../../assets";
+import { footer, socials } from "../../constant";
+import { layout } from "../../style";
 
 const Footer = () => {
   return (

@@ -19,8 +19,9 @@ export default {
           blue: "#1F4497",
           h: "#2a254d",
           p: "#697585",
-          sch: "#0b1ff55",
+          sch: "#0b1f55",
           f: "#b3ade1",
+          c: "#697585",
         },
         cards: {
           p: "#666666",

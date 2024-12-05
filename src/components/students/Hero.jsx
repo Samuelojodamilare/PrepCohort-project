@@ -1,6 +1,7 @@
-import { heroImg1 } from "../assets";
-import { layout } from "../style";
-import Button from "./Button";
+import { heroImg1 } from "../../assets";
+import { frontendUrl } from "../../services/graphqlClient";
+import { layout } from "../../style";
+import Button from "./../common/Button";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -25,7 +26,9 @@ const Hero = () => {
                   className="hidden 2xl:block"
                 />
               </Button>
-              <Button className={`text-black border border-white`}>
+              <Button
+                className={`text-black border border-white`}
+                href={frontendUrl}>
                 Join a School
                 <FontAwesomeIcon
                   icon={faArrowRight}

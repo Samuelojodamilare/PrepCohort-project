@@ -1,11 +1,11 @@
-import { examBg } from "../assets";
-import { layout } from "../style";
+import { examBg } from "../../assets";
+import { layout } from "../../style";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useEffect, useState } from "react";
-import { examPlatform } from "../constant";
+import { examPlatform } from "../../constant";
 
-const ExamPlatform = () => {
+const QuestionBankPage = () => {
   const [Slider, setSlider] = useState(null);
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -43,26 +43,25 @@ const ExamPlatform = () => {
     ],
   };
   if (!Slider) return null;
-
   return (
     <section
       className={layout.section}
       style={{ backgroundImage: `url(${examBg})` }}>
       <div className={layout.container}>
-        <div className="flex flex-col text-center mb-8">
+        <div className="flex flex-col text-center mb-8 mt-10">
           <h3 className="font-workSans text-primary font-bold text-[24px] leading-[26px] mb-[11px]">
-            Multiple Examination Platform
+            Question Banks Provided For Learning
           </h3>
           <p className="font-workSans text-lg text-text-h">
-            Our platform is designed to replicate the exam environment. Practice
-            with simulated exams to prepare ahead for the big day
+            Diverse question banks are made available and schools can bring
+            theirs online for students to practice
           </p>
         </div>
         <Slider {...settings}>
           {examPlatform.map((item) => (
             <div
               key={item.id}
-              className="bg-white rounded-lg shadow-md !w-[90%] !flex flex-col items-center p-4 space-y-2 mx-3 mb-6">
+              className="bg-white rounded-lg shadow-md !w-[90%] !flex flex-col items-center p-4 space-y-2 mx-3 mb-8">
               <div className="w-[230px] h-[150px] flex items-center justify-center">
                 <img
                   src={item.image}
@@ -79,4 +78,4 @@ const ExamPlatform = () => {
   );
 };
 
-export default ExamPlatform;
+export default QuestionBankPage;
