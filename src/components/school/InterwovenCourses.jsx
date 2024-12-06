@@ -24,7 +24,7 @@ const InterwovenCourses = () => {
             </Button>
           </div>
           <div className={`${layout.sectionImg}`}>
-            <div className="w-[570px] h-auto">
+            <div className="w-[500px] xl:w-[400px] 1xl:w-[570px] h-auto">
               <img
                 src={schInterwovenImg}
                 alt="screenshot of courses in s4a"

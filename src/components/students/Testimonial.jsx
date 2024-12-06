@@ -80,7 +80,7 @@ const Testimonial = () => {
               </g>
             </svg>
           </h2>
-          <p className="font-workSans font-bold text-[30px] 0.5xl:text-[40px] leading-[47px] text-text-h">
+          <p className="font-workSans font-bold text-[30px] 0.5xl:text-[40px] leading-[40px] 0.5xl:leading-[47px] text-text-h">
             What Our Students are Saying
           </p>
         </div>

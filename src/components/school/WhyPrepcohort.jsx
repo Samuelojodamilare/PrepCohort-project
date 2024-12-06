@@ -6,11 +6,11 @@ const WhyPrepcohort = () => {
   return (
     <section className={`${layout.section} bg-bg-sc2`}>
       <div className={`${layout.container}`}>
-        <div className="flex flex-col items-center mb-8">
-          <h3 className="font-workSans text-text-h font-bold text-[40px] leading-[26px] mb-[11px]">
+        <div className="flex flex-col items-center text-center mb-8">
+          <h3 className="font-workSans text-text-h font-bold text-[30px] md:text-[40px] leading-[26px] mb-[11px]">
             Why Prepcohort?
           </h3>
-          <p className="font-workSans text-lg text-text-c">
+          <p className="font-workSans text-[16px] text-lg text-text-c">
             Opt for Prepcohort as your e-learning platform as we provide
             outstanding features for your teaching convenience
           </p>

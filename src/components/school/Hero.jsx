@@ -12,10 +12,10 @@ const Hero = () => {
       <div className={`${layout.container} pt-[166px] `}>
         <div className={`${layout.content} `}>
           <div className="1xl:px-[18px] pb-10 xl:mb-0 xl:pt-[45px] 1xl:pt-[90px]">
-            <h2 className="font-workSans text-text-sch text-[40px] 0.5xl:text-[55px] 1xl:text-[70px] leading-[48px] 0.5xl:leading-[65px] 1xl:leading-[85px] font-bold mb-3 md:max-w-[730px]">
+            <h2 className="font-workSans text-text-sch text-[40px] 0.5xl:text-[55px] 1xl:text-[70px] leading-[48px] 0.5xl:leading-[65px] 1xl:leading-[85px] font-bold mb-3 xl:max-w-[500px] 2xl:max-w-[730px] md:max-w-[730px]">
               Join Prepcohort and take charge of your own virtual school
             </h2>
-            <p className="font-workSans text-black text-[16px] leading-[32px] mb-[30px] 0.5xl:max-w-[550px]">
+            <p className="font-workSans text-black text-[16px] leading-[32px] mb-[30px] xl:max-w-[500px] 0.5xl:max-w-[550px]">
               Connect with a larger student base and also bring your students
               onboard and provide quality education to diverse learners
             </p>
@@ -35,18 +35,17 @@ const Hero = () => {
               Powered by Study4AS
             </a>
           </div>
-          <div className="flex flex-1 justify-end items-start xl:ml-10 overflow-hidden">
-            <div className="absolute top-[170px] right-[10px] xl:w-[455px] xl:h-[455px] 1xl:w-[600px] 1xl:h-[600px] 2xl:w-[642px] 2xl:h-[642px] rounded-full p-[34px] bg-gradient-to-br from-[#FF7200] to-[#6A78FF] flex justify-center items-center">
-              <div className="absolute top-[30px] right-[50px] w-[540px] h-auto">
-                <img
-                  src={schoolbannerImg}
-                  alt="a boy with a laptop"
-                  height={532}
-                  width={532}
-                  className="w-full h-auto object-cover "
-                />
-              </div>
+          <div className="inline-block xl:absolute relative z-[2] xl:right-[60px] xl:top-[-80px] 2xl:right-[30px] mx-auto xl:my-[75px] xl:mb-[-100px] xl:flex xl:justify-center mt-[-40px] mr-[-32px] mb-[-165px] right-[5px] top-[120px] md:right-[-70px] md:top-[110px] md:mt-0">
+            <div className="relative top-[-100px] right-[0] md:right-[70px] xl:top-[190px] 2xl:right-[70px] xl:right-[0] xl:w-[450px] 2xl:w-[540px] h-auto z-10">
+              <img
+                src={schoolbannerImg}
+                alt="a boy with a laptop"
+                height={532}
+                width={532}
+                className="w-full h-auto object-cover "
+              />
             </div>
+            <div className="hidden xl:block absolute top-[170px] right-[10px] xl:w-[455px] xl:h-[455px] 1xl:w-[600px] 1xl:h-[600px] 2xl:w-[642px] 2xl:h-[642px] rounded-full p-[34px] bg-gradient-to-br from-[#FF7200] to-[#6A78FF]" />
           </div>
         </div>
       </div>

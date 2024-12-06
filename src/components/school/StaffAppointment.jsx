@@ -9,7 +9,7 @@ const StaffAppointment = () => {
       <div className={`${layout.container}`}>
         <div className={`${layout.content}`}>
           <div className={`${layout.sectionImg}`}>
-            <div className="w-[700px] h-auto">
+            <div className="w-[600px] xl:w-[500px] 1xl:w-[650px] h-auto">
               <img
                 src={staffAppointImg}
                 alt="group of people learning"

@@ -19,7 +19,7 @@ const AbundantQuestionBank = () => {
             <Button className={`button-secondary`}>Start Now</Button>
           </div>
           <div className={`${layout.sectionImg}`}>
-            <div className="w-[570px] h-auto">
+            <div className="w-[550px] xl:w-[400px] 1xl:w-[570px] h-auto">
               <img
                 src={questionBankImg}
                 alt="answer sheet and a pencil"

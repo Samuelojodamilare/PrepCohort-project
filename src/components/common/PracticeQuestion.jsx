@@ -73,7 +73,14 @@ const PracticeQuestion = () => {
 
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 992,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
@@ -100,7 +107,7 @@ const PracticeQuestion = () => {
       <section className={`${layout.section}`}>
         <div className={`${layout.container}`}>
           <h3 className="font-workSans font-bold text-black text-[24px] leading-[26px] mb-[11px] px-5">
-            Question Bank (Recommended)
+            Free Past Questions (Recommended)
           </h3>
           <Slider {...settings}>
             {searchEngineQuestionBank.questionBank.tests.map((item) => (

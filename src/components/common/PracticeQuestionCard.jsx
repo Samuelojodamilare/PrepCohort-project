@@ -12,7 +12,7 @@ const PracticeQuestionCard = ({ label, id, description }) => {
       rel="noreferrer"
       className="bg-white max-w-[80%] min-w-[300px] overflow-hidden">
       <div
-        className="flex flex-col items-center font-workSans space-y-2 rounded-xl my-10 mr-[30px]"
+        className="flex flex-col items-center font-workSans space-y-2 rounded-xl max-0.5xl:mb-20 my-10 mr-[30px]"
         style={{
           boxShadow: "11px 15px 30px 0px rgba(128, 137, 225, 0.1)",
         }}>

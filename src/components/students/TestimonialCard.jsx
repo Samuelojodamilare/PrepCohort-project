@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const TestimonialCard = ({ testimonial }) => {
   return (
-    <div className="flex flex-col items-start bg-white p-6 m-4 rounded-lg shadow-lg">
+    <div className="flex flex-col items-start bg-white p-6 m-4 rounded-lg shadow-lg min-h-[350px]">
       <div className="flex mb-[21px]">
         {Array.from({ length: testimonial.rating }).map((_, index) => (
           <FontAwesomeIcon
@@ -17,7 +17,7 @@ const TestimonialCard = ({ testimonial }) => {
         {testimonial.text}
       </p>
 
-      <div className="flex">
+      <div className="flex max-0.5xl:mt-auto">
         <img
           src={testimonial.image}
           alt={testimonial.title}

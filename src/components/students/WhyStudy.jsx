@@ -63,15 +63,15 @@ const WhyStudy = () => {
   if (!Slider) return null;
 
   return (
-    <section className={`${layout.section} mb-20`}>
+    <section className={`${layout.section} mb-20 overflow-hidden`}>
       <div className={`${layout.container}`}>
         <div className="text-center mb-10 xl:mb-32">
-          <h2 className="font-workSans font-bold text-text-h text-[40px] leading-[47px]">
+          <h2 className="font-workSans font-bold text-text-h text-[27px] md:text-[40px] leading-[47px]">
             Why Study With Prepcohort?{" "}
           </h2>
         </div>
         <div
-          className=" relative border border-[#e0e3fd] rounded-[40px] pr-[50px] pb-[48px] pl-[60px]"
+          className=" relative border border-[#e0e3fd] rounded-[40px] px-6 md:pr-[50px] pb-[48px] md:pl-[60px]"
           style={{
             boxShadow: "11px 15px 30px 0px rgba(128, 137, 225, 0.1)",
           }}>
@@ -79,10 +79,10 @@ const WhyStudy = () => {
             <Slider {...settings} ref={sliderRef}>
               {whyStudy.map((item) => (
                 <div key={item.id}>
-                  <h4 className="text-[30px] font-medium font-workSans text-text-h mt-[48px] mb-[32px]">
+                  <h4 className="text-[28px] 0.5xl:text-[30px] font-medium font-workSans text-text-h mt-[48px] mb-[32px]">
                     {item.title}
                   </h4>
-                  <p className="text-[20px] font-workSans text-text-h leading-[37px] max-w-[691px]">
+                  <p className="text-[18px] 0.5xl:text-[20px] font-workSans text-text-h leading-[37px] max-w-[691px]">
                     {item.text}
                   </p>
                 </div>
@@ -94,7 +94,7 @@ const WhyStudy = () => {
             </div>
           </div>
 
-          <div className="inline-block xl:absolute z-[2] xl:right-[-160px] xl:top-[-120px] 2xl:right-[0px] relative mx-auto xl:my-[75px] xl:mb-[-100px] xl:flex xl:justify-center mt-[-40px] mr-[-32px] mb-[-165px] right-[40px] top-[120px] md:right-[-70px] md:top-[110px] md:mt-3">
+          <div className="inline-block xl:absolute z-[2] xl:right-[-160px] xl:top-[-120px] 2xl:right-[0px] relative mx-auto xl:my-[75px] xl:mb-[-100px] xl:flex xl:justify-center mt-[-40px] mr-[-32px] mb-[-165px] right-[5px] top-[120px] md:right-[-70px] md:top-[110px] md:mt-3">
             <div className="w-[360px] h-[360px] md:w-[450px] md:h-[450px] xl:h-[450px] xl:w-[450px] rounded-full overflow-hidden">
               <img
                 src={whyStudyImg}

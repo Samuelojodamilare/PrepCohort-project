@@ -304,13 +304,13 @@ export const whyPrepcohort = [
     icon: faBatteryFull,
   },
   {
-    id: 0,
+    id: 6,
     title: "Time Saving",
     text: "Save valuable time with Prepcohort’s streamlined features, designed to allow more focus on teaching",
     icon: faHourglass,
   },
   {
-    id: 0,
+    id: 7,
     title: "AI- Assistance",
     text: "Your students receive actionable suggestions on providing constructive and personalized feedback and recommendations",
     icon: faCheckSquare,

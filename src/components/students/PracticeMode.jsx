@@ -14,13 +14,13 @@ const PracticeMode = () => {
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
       }}>
-      <div className={`${layout.container} relative z-10`}>
+      <div className={`${layout.container} relative z-10 py-8`}>
         <div className={`flex justify-center items-center`}>
           <div className="text-center">
-            <h3 className="font-workSans font-bold text-white text-[40px] leading-[40px] mb-[34px]">
+            <h3 className="font-workSans font-bold text-white text-[35px] xl:text-[40px] leading-[40px] mb-[34px]">
               Plunge into Practice Mode
             </h3>
-            <p className="font-workSans font-normal text-white text-[22px] leading-6 mb-[34px] max-w-[609px]">
+            <p className="font-poppins font-normal text-white text-[22px] leading-6 mb-[34px] max-w-[609px]">
               Access diverse question bank that provides a wide range of
               practice questions to reinforce your understanding and prepare you
               thoroughly for exams

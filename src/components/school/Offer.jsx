@@ -8,18 +8,18 @@ const Offer = () => {
   return (
     <section className={`${layout.section} bg-bg-sc2`}>
       <div className={`${layout.container}`}>
-        <div className="flex flex-col items-center mb-8">
-          <h3 className="font-workSans text-text-h font-bold text-[40px] leading-[26px] mb-[11px]">
+        <div className="flex flex-col items-center text-center mb-8">
+          <h3 className="font-workSans text-text-h font-bold text-[30px] md:text-[40px] leading-[26px] mb-[11px]">
             What we offer
           </h3>
-          <p className="font-workSans text-lg text-text-c">
+          <p className="font-workSans text-[16px] md:text-lg text-text-c">
             We provide innovative, comprehensive and user-friendly tools that
             empowers schools run effectively
           </p>
         </div>
         <div className={`${layout.content}`}>
           <div className={`${layout.sectionImg}`}>
-            <div className="w-[550px] h-auto">
+            <div className="w-[550px] xl:w-[400px] 1xl:w-[550px] h-auto">
               <img
                 src={offerImg}
                 alt="A man standing folding arms"

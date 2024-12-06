@@ -7,7 +7,7 @@ const AISupport = () => {
       <div className={`${layout.container}`}>
         <div className={`${layout.content}`}>
           <div className={`${layout.sectionImg}`}>
-            <div className="w-[550px] h-auto">
+            <div className="w-[550px] xl:w-[400px] 1xl:w-[550px] h-auto">
               <img src={AIImg} alt="guy and a lady" className="w-full h-auto" />
             </div>
           </div>

@@ -24,13 +24,15 @@ const AmazingFeatures = () => {
             className={`${layout.sectionInfo} border border-gray-300 px-[18px]`}>
             <div className="flex gap-4 py-6">
               <Button
-                className={`button-primary`}
-                onClick={() => handleClick("features")}>
+                className={`button-primary max-0.5xl:px-3 max-0.5xl:text-[14px]`}
+                onClick={() => handleClick("features")}
+                asLink={false}>
                 Amazing Features
               </Button>
               <Button
-                className={`button-secondary`}
-                onClick={() => handleClick("morefeatures")}>
+                className={`button-secondary max-0.5xl:px-3 max-0.5xl:text-[14px]`}
+                onClick={() => handleClick("morefeatures")}
+                asLink={false}>
                 More Amazing Features
               </Button>
             </div>

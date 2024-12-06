@@ -53,7 +53,7 @@ const Header = () => {
             to="/schools"
             className={({ isActive }) =>
               isActive
-                ? "hidden xl:inline-block text-white bg-[#20419A] text-sm sm:text-[15px] font-poppins font-semibold px-2.5 sm:px-5 py-2 sm:py-2.5 rounded-md cursor-pointer transition-colors duration-500 hover:bg-[#4f5de4]"
+                ? "hidden 1xl:inline-block text-white bg-[#20419A] text-sm sm:text-[15px] font-poppins font-semibold px-2.5 sm:px-5 py-2 sm:py-2.5 rounded-md cursor-pointer transition-colors duration-500 hover:bg-[#4f5de4]"
                 : "font-poppins text-black text-[16px] cursor-pointer transition-colors duration-500 hover:text-secondary"
             }
             aria-label="For Schools">
@@ -63,7 +63,7 @@ const Header = () => {
             to="/#"
             className={({ isActive }) =>
               isActive
-                ? "hidden xl:inline-block text-white bg-[#20419A] text-sm sm:text-[15px] font-poppins font-semibold px-2.5 sm:px-5 py-2 sm:py-2.5 rounded-md cursor-pointer transition-colors duration-500 hover:bg-[#4f5de4]"
+                ? "hidden 1xl:inline-block text-white bg-[#20419A] text-sm sm:text-[15px] font-poppins font-semibold px-2.5 sm:px-5 py-2 sm:py-2.5 rounded-md cursor-pointer transition-colors duration-500 hover:bg-[#4f5de4]"
                 : "font-poppins text-black text-[16px] cursor-pointer transition-colors duration-500 hover:text-secondary"
             }
             aria-label="For Schools">
