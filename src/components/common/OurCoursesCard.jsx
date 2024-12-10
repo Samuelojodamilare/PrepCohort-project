@@ -11,7 +11,7 @@ const OurCoursesCard = ({ label, institutionName, id }) => {
       rel="noreferrer"
       className="bg-white w-[300px] text-primary ">
       <div
-        className="flex flex-col items-center space-y-2 rounded-xl my-10 mr-[30px]"
+        className="flex flex-col items-center space-y-2 rounded-xl my-10 mr-[30px] transition transform hover:-translate-y-2 ease-in-out duration-500"
         style={{
           boxShadow: "11px 15px 30px 0px rgba(128, 137, 225, 0.1)",
         }}>

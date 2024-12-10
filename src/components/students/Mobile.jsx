@@ -1,12 +1,16 @@
 import { mobilePhone, playstoreImg } from "../../assets";
 import { layout } from "../../style";
+import useIntersectionObserver from "./../../constant/useIntersectionObserver";
 
 const Mobile = () => {
+  useIntersectionObserver(".section-info", "animate-fadeRight");
+  useIntersectionObserver(".section-img", "animate-fadeLeft");
   return (
     <section className={`${layout.section} bg-bg-m`}>
       <div className={`${layout.container}`}>
         <div className={`${layout.contentReverse}`}>
-          <div className={`${layout.sectionInfo} max-md:pt-[45px]`}>
+          <div
+            className={`${layout.sectionInfo} section-info hide max-md:pt-[45px]`}>
             <h3 className="font-workSans font-bold text-[24px] leading-[26px] text-[#31265a] mb-[21px]">
               Download Mobile Version
             </h3>
@@ -30,7 +34,7 @@ const Mobile = () => {
               </div>
             </div>
           </div>
-          <div className={`${layout.sectionImg}`}>
+          <div className={`${layout.sectionImg} section-img hide`}>
             <img src={mobilePhone} alt="phone" className="w-full h-auto" />
           </div>
         </div>

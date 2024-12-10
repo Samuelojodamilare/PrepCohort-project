@@ -4,8 +4,11 @@ import { layout } from "../../style";
 import Button from "./../common/Button";
 import { amazing, Mamazing } from "../../constant";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import useIntersectionObserver from "../../constant/useIntersectionObserver";
 
 const AmazingFeatures = () => {
+  useIntersectionObserver(".section-img", "animate-fadeRight");
+  useIntersectionObserver(".section-info", "animate-fadeLeft");
   const [activeList, setActiveList] = useState("features");
 
   const handleClick = (link) => {
@@ -17,11 +20,11 @@ const AmazingFeatures = () => {
     <section className={`${layout.section}`}>
       <div className={`${layout.container}`}>
         <div className={`${layout.content}`}>
-          <div className={`${layout.sectionImg}`}>
+          <div className={`${layout.sectionImg} section-img hide`}>
             <img src={amazingImg} alt="laptop and phone" />
           </div>
           <div
-            className={`${layout.sectionInfo} border border-gray-300 px-[18px]`}>
+            className={`${layout.sectionInfo} section-info hide border border-gray-300 px-[18px]`}>
             <div className="flex gap-4 py-6">
               <Button
                 className={`button-primary max-0.5xl:px-3 max-0.5xl:text-[14px]`}

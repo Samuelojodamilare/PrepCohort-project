@@ -1,7 +1,10 @@
 import { interwovenImg } from "../../assets";
 import { layout } from "../../style";
 import Button from "./../common/Button";
+import useIntersectionObserver from "../../constant/useIntersectionObserver";
 const InterwovenPractice = () => {
+  useIntersectionObserver(".section-info", "animate-fadeRight");
+  useIntersectionObserver(".section-img", "animate-fadeLeft");
   return (
     <section className={`${layout.section}`}>
       <div className={`${layout.container}`}>
@@ -19,7 +22,7 @@ const InterwovenPractice = () => {
             </p>
             <Button className={`button-secondary`}>Start Now</Button>
           </div>
-          <div className={`${layout.sectionImg}`}>
+          <div className={`${layout.sectionImg} `}>
             <div className="w-[570px] xl:w-[400px] 1xl:w-[570px] h-auto">
               <img
                 src={interwovenImg}

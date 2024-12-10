@@ -5,13 +5,16 @@ import { layout } from "../../style";
 import Button from "./../common/Button";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import useIntersectionObserver from "../../constant/useIntersectionObserver";
 
 const Hero = () => {
+  useIntersectionObserver(".section-info", "animate-fadeRight");
+  useIntersectionObserver(".section-img", "animate-fadeLeft");
   return (
     <section id="hero" className={`relative bg-bg-sc1 mt-0.5 overflow-hidden`}>
       <div className={`${layout.container} pt-[166px] `}>
         <div className={`${layout.content} `}>
-          <div className="1xl:px-[18px] pb-10 xl:mb-0 xl:pt-[45px] 1xl:pt-[90px]">
+          <div className="1xl:px-[18px] pb-10 xl:mb-0 xl:pt-[45px] 1xl:pt-[90px] section-info hide">
             <h2 className="font-workSans text-text-sch text-[40px] 0.5xl:text-[55px] 1xl:text-[70px] leading-[48px] 0.5xl:leading-[65px] 1xl:leading-[85px] font-bold mb-3 xl:max-w-[500px] 2xl:max-w-[730px] md:max-w-[730px]">
               Join Prepcohort and take charge of your own virtual school
             </h2>
@@ -35,7 +38,7 @@ const Hero = () => {
               Powered by Study4AS
             </a>
           </div>
-          <div className="inline-block xl:absolute relative z-[2] xl:right-[60px] xl:top-[-80px] 2xl:right-[30px] mx-auto xl:my-[75px] xl:mb-[-100px] xl:flex xl:justify-center mt-[-40px] mr-[-32px] mb-[-165px] right-[5px] top-[120px] md:right-[-70px] md:top-[110px] md:mt-0">
+          <div className="section-img hide inline-block xl:absolute relative z-[2] xl:right-[60px] xl:top-[-80px] 2xl:right-[30px] mx-auto xl:my-[75px] xl:mb-[-100px] xl:flex xl:justify-center mt-[-40px] mr-[-32px] mb-[-165px] right-[5px] top-[120px] md:right-[-70px] md:top-[110px] md:mt-0">
             <div className="relative top-[-100px] right-[0] md:right-[70px] xl:top-[190px] 2xl:right-[70px] xl:right-[0] xl:w-[450px] 2xl:w-[540px] h-auto z-10">
               <img
                 src={schoolbannerImg}

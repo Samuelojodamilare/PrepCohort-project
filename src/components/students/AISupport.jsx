@@ -1,12 +1,15 @@
 import { AIImg } from "../../assets";
 import { layout } from "../../style";
 import Button from "./../common/Button";
+import useIntersectionObserver from "../../constant/useIntersectionObserver";
 const AISupport = () => {
+  useIntersectionObserver(".section-info", "animate-fadeRight");
+  useIntersectionObserver(".section-img", "animate-fadeLeft");
   return (
     <section className={`${layout.section}`}>
       <div className={`${layout.container}`}>
         <div className={`${layout.content}`}>
-          <div className={`${layout.sectionImg}`}>
+          <div className={`${layout.sectionImg} `}>
             <div className="w-[550px] xl:w-[400px] 1xl:w-[550px] h-auto">
               <img src={AIImg} alt="guy and a lady" className="w-full h-auto" />
             </div>

@@ -31,8 +31,6 @@ const WhyStudy = () => {
       });
     }
   }, []);
-  // const sliderRef = useState();
-
   const settings = {
     dots: false,
     infinite: true,
@@ -95,7 +93,7 @@ const WhyStudy = () => {
           </div>
 
           <div className="inline-block xl:absolute z-[2] xl:right-[-160px] xl:top-[-120px] 2xl:right-[0px] relative mx-auto xl:my-[75px] xl:mb-[-100px] xl:flex xl:justify-center mt-[-40px] mr-[-32px] mb-[-165px] right-[5px] top-[120px] md:right-[-70px] md:top-[110px] md:mt-3">
-            <div className="w-[360px] h-[360px] md:w-[450px] md:h-[450px] xl:h-[450px] xl:w-[450px] rounded-full overflow-hidden">
+            <div className=" w-[360px] h-[360px] md:w-[450px] md:h-[450px] xl:h-[450px] xl:w-[450px] rounded-full overflow-hidden">
               <img
                 src={whyStudyImg}
                 alt="desktop"

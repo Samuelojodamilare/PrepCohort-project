@@ -2,8 +2,11 @@ import { staffAppointImg } from "../../assets";
 import { layout } from "../../style";
 import Button from "./../common/Button";
 import { consoleUrl } from "../../services/graphqlClient";
+import useIntersectionObserver from "../../constant/useIntersectionObserver";
 
 const StaffAppointment = () => {
+  useIntersectionObserver(".section-info", "animate-fadeRight");
+  useIntersectionObserver(".section-img", "animate-fadeLeft");
   return (
     <section className={`${layout.section}`}>
       <div className={`${layout.container}`}>

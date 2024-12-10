@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { footerBg, pcLogo } from "../../assets";
+import { footerBg, pcLogo1 } from "../../assets";
 import { footer, socials } from "../../constant";
 import { layout } from "../../style";
 
@@ -16,7 +16,7 @@ const Footer = () => {
             aria-label="Homepage link">
             <div className="w-[50px] h-auto">
               <img
-                src={pcLogo}
+                src={pcLogo1}
                 alt="Prepcohort logo"
                 width={50}
                 height={50}

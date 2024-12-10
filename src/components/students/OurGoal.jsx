@@ -2,15 +2,18 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { ourgoalbg } from "../../assets";
 import { goal } from "../../constant";
 import { layout } from "../../style";
+import useIntersectionObserver from "../../constant/useIntersectionObserver";
 
 const OurGoal = () => {
+  useIntersectionObserver(".section-info", "animate-slideDown");
+  useIntersectionObserver(".section-card", "animate-slideUp");
   return (
     <section
       className={`${layout.section} bg-bg-st1/65`}
       style={{ backgroundImage: `url(${ourgoalbg})` }}>
       <div className={`${layout.container}`}>
         <div className={`flex flex-col`}>
-          <div className="flex flex-col xl:flex-row">
+          <div className="flex flex-col xl:flex-row section-info hide">
             <div className="flex-1 mb-[40px] pr-3 2xl:pr-[18px]">
               <h4 className="text-primary font-workSans font-semibold text-[24px] mb-[11px]">
                 Our Goal
@@ -41,11 +44,11 @@ const OurGoal = () => {
               </p>
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mt-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mt-8 section-card hide">
             {goal.map((item) => (
               <div
                 key={item.id}
-                className="relative z-20 overflow-hidden bg-white text-black p-6 rounded-2xl shadow-lg hover:text-secondary transition-all duration-500 ease-in-out">
+                className="relative z-20 overflow-hidden bg-white text-black p-6 rounded-2xl shadow-lg hover:text-secondary transition-all transform hover:-translate-y-2 duration-500 ease-in-out">
                 <div className="relative z-20 flex flex-col items-center">
                   <FontAwesomeIcon
                     icon={item.icon}

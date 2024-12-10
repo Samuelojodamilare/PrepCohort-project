@@ -69,7 +69,7 @@ const ExamPlatform = () => {
           {examPlatform.map((item) => (
             <div
               key={item.id}
-              className="bg-white rounded-lg shadow-md !w-[90%] !flex flex-col items-center p-4 space-y-2 mx-3 mb-6">
+              className="bg-white rounded-lg shadow-lg !w-[90%] !flex flex-col items-center p-4 space-y-2 mx-3 mb-6">
               <div className="w-[230px] h-[150px] flex items-center justify-center">
                 <img
                   src={item.image}

@@ -3,14 +3,17 @@ import { categoryBg } from "../../assets";
 import { category } from "../../constant";
 import { layout } from "../../style";
 import { frontendUrl } from "../../services/graphqlClient";
+import useIntersectionObserver from "../../constant/useIntersectionObserver";
 
 const Category = () => {
+  useIntersectionObserver(".section-header", "animate-slideUp");
+  useIntersectionObserver(".section-card", "animate-slideUp");
   return (
     <section
       className={`${layout.section} flex items-center justify-center bg-cover bg-center bg-no-repeat`}
       style={{ backgroundImage: `url(${categoryBg})` }}>
       <div className={`${layout.container}`}>
-        <div className="flex flex-col text-center mb-[50px] pt-16">
+        <div className="flex flex-col text-center mb-[50px] pt-16 section-header hide">
           <h2 className="font-workSans text-primary font-bold text-[24px] leading-[26px] mb-[11px]">
             Our Categories
             <svg
@@ -29,7 +32,7 @@ const Category = () => {
             Favorite Categories to Learn From
           </p>
         </div>
-        <div className="grid gap-6 0.5xl:grid-cols-1 md:grid-cols-2 xl:grid-cols-4 pb-5">
+        <div className="section-card hide grid gap-6 0.5xl:grid-cols-1 md:grid-cols-2 xl:grid-cols-4 pb-5">
           {category.map((item) => (
             <a href={`${frontendUrl}/explore`} key={item.id}>
               <div

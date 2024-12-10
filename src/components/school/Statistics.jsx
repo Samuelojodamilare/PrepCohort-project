@@ -53,7 +53,7 @@ const Statistics = () => {
             Proven Statistics About Our Platform
           </h3>
           <div
-            className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 py-[50px] px-[25px] rounded-b-3xl"
+            className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 py-[50px] px-[25px] rounded-b-3xl shadow-lg"
             style={{ backgroundImage: `url(${statinnerBg})` }}>
             <div className="flex flex-col items-center pt-[25px] pb-[18px] px-3 text-center">
               <FontAwesomeIcon

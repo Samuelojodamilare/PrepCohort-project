@@ -33,19 +33,19 @@ const Header = () => {
             href="#"
             className="flex items-center text-black text-[32px]"
             aria-label="Homepage link">
-            <div className="w-[50px] h-auto">
+            <div className="w-[200px] h-auto">
               <img
                 src={pcLogo}
                 alt="Prepcohort logo"
-                width={50}
-                height={50}
+                width={200}
+                height={200}
                 className="w-full h-auto object-contain"
               />
             </div>
-            <span className="text-text-h">
+            {/* <span className="text-text-h">
               <b>Prep</b>
             </span>
-            Cohort
+            Cohort */}
           </a>
         </div>
         <nav className="flex items-center space-x-4">

@@ -24,3 +24,15 @@
     @apply bg-[#f57005] hover:bg-[#d45c04] text-white py-2 px-4 rounded;
   }
 }
+
+@layer utilities {
+  .hide {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .visibles {
+    opacity: 1;
+    visibility: visible;
+    transition: visibility 0s, opacity 1s ease-in-out;
+  }
+}

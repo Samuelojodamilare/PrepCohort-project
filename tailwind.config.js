@@ -38,6 +38,30 @@ export default {
         xl: "992px",
         "1xl": "1200px",
       },
+      animation: {
+        slideUp: "slideUp 1s ease-in-out forwards",
+        slideDown: "slideDown 1s ease-in-out forwards",
+        fadeLeft: "fadeLeft 1s ease-in-out forwards",
+        fadeRight: "fadeRight 1s ease-in-out forwards",
+      },
+      keyframes: {
+        slideUp: {
+          "0%": { opacity: "0", transform: "translateY(20px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        slideDown: {
+          "0%": { opacity: "0", transform: "translateY(-20px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        fadeLeft: {
+          "0%": { opacity: "0", transform: "translateX(-20px)" },
+          "100%": { opacity: "1", transform: "translateX(0)" },
+        },
+        fadeRight: {
+          "0%": { opacity: "0", transform: "translateX(20px)" },
+          "100%": { opacity: "1", transform: "translateX(0)" },
+        },
+      },
     },
   },
   plugins: [],

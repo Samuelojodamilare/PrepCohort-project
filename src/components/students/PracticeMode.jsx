@@ -3,8 +3,10 @@ import { layout } from "../../style";
 import Button from "./../common/Button";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import useIntersectionObserver from "../../constant/useIntersectionObserver";
 
 const PracticeMode = () => {
+  useIntersectionObserver(".section-info", "animate-slideUp");
   return (
     <section
       className={`${layout.section} relative`}
@@ -15,7 +17,7 @@ const PracticeMode = () => {
         backgroundPosition: "center",
       }}>
       <div className={`${layout.container} relative z-10 py-8`}>
-        <div className={`flex justify-center items-center`}>
+        <div className={`flex justify-center items-center section-info hide`}>
           <div className="text-center">
             <h3 className="font-workSans font-bold text-white text-[35px] xl:text-[40px] leading-[40px] mb-[34px]">
               Plunge into Practice Mode

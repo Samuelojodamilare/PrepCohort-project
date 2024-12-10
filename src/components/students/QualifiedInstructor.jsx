@@ -1,8 +1,11 @@
 import { instructorImg } from "../../assets";
 import { layout } from "../../style";
 import Button from "./../common/Button";
+import useIntersectionObserver from "../../constant/useIntersectionObserver";
 
 const QualifiedInstructor = () => {
+  useIntersectionObserver(".section-info", "animate-fadeRight");
+  useIntersectionObserver(".section-img", "animate-fadeLeft");
   return (
     <section className={`${layout.section}`}>
       <div className={`${layout.container}`}>
