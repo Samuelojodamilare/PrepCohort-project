@@ -3,10 +3,12 @@ import { ApolloProvider } from "@apollo/client";
 import ApolloClientInstance from "./services/graphqlClient";
 import Header from "./components/common/Header";
 import Footer from "./components/common/Footer";
+import PageOne from "./pages/PageOne";
+import PageTwo from "./pages/PageTwo";
 
 // Lazy load pages
-const PageOne = lazy(() => import("./pages/PageOne"));
-const PageTwo = lazy(() => import("./pages/PageTwo"));
+// const PageOne = lazy(() => import("./pages/PageOne"));
+// const PageTwo = lazy(() => import("./pages/PageTwo"));
 
 const ErrorBoundary = ({ children }) => {
   try {
@@ -50,12 +52,12 @@ function App({ location }) {
     <ApolloProvider client={ApolloClientInstance}>
       <RouterComponent location={location} context={{}}>
         <Header />
-        <Suspense fallback={<p>Loading section...</p>}>
-          <Routes>
-            <Route path="/" element={<PageOne />} />
-            <Route path="/schools" element={<PageTwo />} />
-          </Routes>
-        </Suspense>
+        <Routes>
+          <Route path="/" element={<PageOne />} />
+          <Route path="/schools" element={<PageTwo />} />
+        </Routes>
+        {/* <Suspense fallback={<p>Loading section...</p>}>   
+        </Suspense> */}
         <Footer />
       </RouterComponent>
     </ApolloProvider>
