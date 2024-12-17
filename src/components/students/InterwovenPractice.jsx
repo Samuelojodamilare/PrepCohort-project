@@ -23,7 +23,7 @@ const InterwovenPractice = () => {
             <Button className={`button-secondary`}>Start Now</Button>
           </div>
           <div className={`${layout.sectionImg} `}>
-            <div className="w-[570px] xl:w-[400px] 1xl:w-[570px] h-auto">
+            <div className="w-[550px] xl:w-[400px] 1xl:w-[550px] h-auto">
               <img
                 src={interwovenImg}
                 alt="answer sheet and a pencil"

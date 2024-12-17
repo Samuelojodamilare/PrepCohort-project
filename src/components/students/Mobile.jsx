@@ -10,11 +10,11 @@ const Mobile = () => {
       <div className={`${layout.container}`}>
         <div className={`${layout.contentReverse}`}>
           <div
-            className={`${layout.sectionInfo} section-info hide max-md:pt-[45px]`}>
+            className={`${layout.sectionInfo} section-info hide max-md:pt-[45px] `}>
             <h3 className="font-workSans font-bold text-[24px] leading-[26px] text-[#31265a] mb-[21px]">
               Download Mobile Version
             </h3>
-            <p className="font-workSans text-[16px] text-text-p leading-[26px] mb-[33px]">
+            <p className="font-workSans text-[16px] text-text-p leading-[26px] mb-[33px] max-w-[513px]">
               To download the mobile version of Prepcohort, please visit the
               Google Play Store or Apple App Store on your mobile device.
             </p>
@@ -35,7 +35,9 @@ const Mobile = () => {
             </div>
           </div>
           <div className={`${layout.sectionImg} section-img hide`}>
-            <img src={mobilePhone} alt="phone" className="w-full h-auto" />
+            <div className="w-[500px] xl:w-[400px] 1xl:w-[500px] h-auto">
+              <img src={mobilePhone} alt="phone" className="w-full h-auto" />
+            </div>
           </div>
         </div>
       </div>

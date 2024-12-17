@@ -1,4 +1,3 @@
-import { Suspense, lazy } from "react";
 import ApolloClientInstance from "../services/graphqlClient";
 import { ApolloProvider } from "@apollo/client";
 import Hero from "../components/school/Hero";
@@ -13,6 +12,7 @@ import MoreStudent from "../components/school/MoreStudent";
 import EffortlessGrading from "../components/school/EffortlessGrading";
 import Testimonial from "../components/school/Testimonial";
 import Statistics from "../components/school/Statistics";
+import AITeachingSupport from "../components/school/AITeachingSupport";
 
 const PageTwo = () => {
   return (
@@ -28,6 +28,7 @@ const PageTwo = () => {
       <StaffAppointment />
       <MoreStudent />
       <EffortlessGrading />
+      <AITeachingSupport />
       <Testimonial />
     </ApolloProvider>
   );
