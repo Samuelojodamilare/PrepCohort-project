@@ -28,7 +28,7 @@ const AITeachingSupport = () => {
             </Button>
           </div>
           <div className={`${layout.sectionImg}`}>
-            <div className="w-[650px] h-auto">
+            <div className="w-[550px] xl:w-[400px] 1xl:w-[550px] h-auto">
               <img
                 src={schoolAI}
                 alt="screenshot of courses in s4a"

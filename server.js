@@ -36,9 +36,11 @@ if (!isProduction) {
   app.use(base, sirv("./dist/client", { extensions: [] }));
 }
 
+app.get("/favicon.ico", (req, res) => {
+  res.status(204).end(); // No Content
+});
 // Serve HTML
 app.use("*all", async (req, res) => {
-  console.log(`Request received for: ${req.originalUrl}`);
   try {
     const url = req.originalUrl.replace(base, "");
 
@@ -55,7 +57,7 @@ app.use("*all", async (req, res) => {
     }
 
     let didError = false;
-    console.log(`Rendering URL: ${url}`);
+
     const { pipe, abort } = render(url, ssrManifest, {
       onShellError() {
         res.status(500);
@@ -88,14 +90,11 @@ app.use("*all", async (req, res) => {
         console.error(error);
       },
     });
-    console.log(`Render completed for URL: ${url}`);
 
     setTimeout(() => {
-      console.log("server time out error");
       abort();
     }, ABORT_DELAY);
   } catch (e) {
-    console.error(`Error in middleware: ${e.stack}`);
     vite?.ssrFixStacktrace(e);
     console.log(e.stack);
     res.status(500).end(e.stack);

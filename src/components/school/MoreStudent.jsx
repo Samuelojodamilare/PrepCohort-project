@@ -26,7 +26,7 @@ const MoreStudent = () => {
             </Button>
           </div>
           <div className={`${layout.sectionImg}`}>
-            <div className="w-[600px] xl:w-[500px] 1xl:w-[650px] h-auto">
+            <div className="w-[550px] xl:w-[400px] 1xl:w-[550px] h-auto">
               <img
                 src={moreStudentImg}
                 alt="screenshot of courses in s4a"

@@ -1,6 +1,5 @@
 import ApolloClientInstance from "../services/graphqlClient";
 import { ApolloProvider } from "@apollo/client";
-
 import Hero from "./../components/students/Hero";
 import OurGoal from "./../components/students/OurGoal";
 import Mobile from "./../components/students/Mobile";

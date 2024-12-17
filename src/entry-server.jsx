@@ -9,6 +9,7 @@ import App from "./App";
  * @param {import('react-dom/server').RenderToPipeableStreamOptions} [options]
  */
 export function render(url, ssrManifest, options) {
+  console.log(`SSR Render Function Called with URL:`, url);
   const context = {};
   return renderToPipeableStream(
     <StrictMode>
