@@ -18,8 +18,7 @@ const Hero = () => {
               Access expert guidance and tailored resources for exam success
             </h2>
             <p className="font-workSans text-black text-[16px] leading-[32px] mb-[30px] 0.5xl:max-w-[469px]">
-              Empower your future through education! Join thousands learning
-              together on Prepcohort. Practice along as you study,
+            Access expert tutoring and free past questions with detailed explanations for WAEC, GCE, JAMB, and more. Join thousands learning together on Prepcohort!
             </p>
             <div className="flex gap-5 mb-14">
               <Button className={`button-secondary `}>

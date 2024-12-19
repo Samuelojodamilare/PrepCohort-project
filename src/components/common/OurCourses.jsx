@@ -103,7 +103,7 @@ const OurCourses = () => {
       <section className={`${layout.section}`}>
         <div className={`${layout.container}`}>
           <h3 className="font-workSans font-bold text-black text-[24px] leading-[26px] mb-[11px] px-5">
-            Course (Recommended)
+            Courses with instructor support (Recommended)
           </h3>
           <Slider {...settings}>
             {searchEngineCourses.subjects.subjects.map((item) => (

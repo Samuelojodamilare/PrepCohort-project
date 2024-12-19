@@ -107,7 +107,7 @@ const PracticeQuestion = () => {
       <section className={`${layout.section}`}>
         <div className={`${layout.container}`}>
           <h3 className="font-workSans font-bold text-black text-[24px] leading-[26px] mb-[11px] px-5">
-            Free Past Questions (Recommended)
+            Free Past Questions solved with Answers (Recommended)
           </h3>
           <Slider {...settings}>
             {searchEngineQuestionBank.questionBank.tests.map((item) => (
