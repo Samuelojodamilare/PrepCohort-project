@@ -29,10 +29,6 @@ if (!isProduction) {
     base,
   });
   app.use(vite.middlewares);
-
-  // console.log("Preloading lazy-loaded components for SSR...");
-  // await import("./src/pages/PageOne");
-  // await import("./src/pages/PageTwo");
 } else {
   const compression = (await import("compression")).default;
   const sirv = (await import("sirv")).default;
@@ -47,9 +43,11 @@ app.get("/favicon.ico", (req, res) => {
 app.use("*all", async (req, res) => {
   try {
     const url = req.originalUrl.replace(base, "");
+
     let template;
     let render;
     if (!isProduction) {
+      // Always read fresh template in development
       template = await fs.readFile("./index.html", "utf-8");
       template = await vite.transformIndexHtml(url, template);
       render = (await vite.ssrLoadModule("/src/entry-server.jsx")).render;
@@ -57,6 +55,7 @@ app.use("*all", async (req, res) => {
       template = templateHtml;
       render = (await import("./dist/server/entry-server.js")).render;
     }
+
     let didError = false;
 
     const { pipe, abort } = render(url, ssrManifest, {
@@ -88,7 +87,7 @@ app.use("*all", async (req, res) => {
       },
       onError(error) {
         didError = true;
-        console.error(`Error during streaming for URL ${url}:`, error);
+        console.error(error);
       },
     });
 

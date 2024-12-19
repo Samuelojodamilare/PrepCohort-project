@@ -4,6 +4,7 @@ import imgDesign1 from "./img-design1.png";
 import imgDesign2 from "./img-design2.png";
 import heroImg1 from "./hero/ForPrepCohort1.webp";
 import playstoreImg from "./mobile/googleplayImg.png";
+import appstoreImg from "./mobile/AppstoreImg.webp";
 import mobilePhone from "./mobile/mobile-phone.webp";
 import practiceBg from "./practice/practicebg.webp";
 import practiceDesign from "./practice/practicedesign.webp";
@@ -72,6 +73,7 @@ export {
   imgDesign1,
   imgDesign2,
   playstoreImg,
+  appstoreImg,
   mobilePhone,
   practiceBg,
   practiceDesign,
