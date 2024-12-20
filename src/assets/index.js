@@ -1,5 +1,5 @@
 import pcLogo1 from "./PClogo.webp";
-import pcLogo from "./PC Logo full.svg";
+import pcLogo from "./PC-Logo-full.svg";
 import imgDesign1 from "./img-design1.png";
 import imgDesign2 from "./img-design2.png";
 import heroImg1 from "./hero/ForPrepCohort1.webp";
