@@ -12,11 +12,10 @@ const Mobile = () => {
           <div
             className={`${layout.sectionInfo} section-info hide max-md:pt-[45px] `}>
             <h3 className="font-workSans font-bold text-[24px] leading-[26px] text-[#31265a] mb-[21px]">
-              Download Mobile Version
+              Download the Prepcohort Mobile App
             </h3>
             <p className="font-workSans text-[16px] text-text-p leading-[26px] mb-[33px] max-w-[513px]">
-              To download the mobile version of Prepcohort, please visit the
-              Google Play Store or Apple App Store on your mobile device.
+              Get the Prepcohort app now from the Google Play Store or Apple App Store on your mobile device. Access exclusive mobile app features, including the ability to download unlimited past questions offline and practice as often as you want, anytime, anywhere!
             </p>
             <div className="flex gap-3">
               <a
