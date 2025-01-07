@@ -9,6 +9,16 @@ import {
   goalbg4,
   ieltsImg,
   jambImg,
+  mobilescreen1,
+  mobilescreen10,
+  mobilescreen2,
+  mobilescreen3,
+  mobilescreen4,
+  mobilescreen5,
+  mobilescreen6,
+  mobilescreen7,
+  mobilescreen8,
+  mobilescreen9,
   nabtebImg,
   necoImg,
   testimonialImg1,
@@ -81,6 +91,49 @@ export const goal = [
     text: "Track your progress. Gain valuable insights into your performance, identify strengths and areas for improvement",
     icon: faChartLine,
     image: goalbg4,
+  },
+];
+
+export const mobile = [
+  {
+    id: 0,
+    img: mobilescreen1,
+  },
+  {
+    id: 1,
+    img: mobilescreen2,
+  },
+  {
+    id: 2,
+    img: mobilescreen3,
+  },
+  {
+    id: 3,
+    img: mobilescreen4,
+  },
+  {
+    id: 4,
+    img: mobilescreen5,
+  },
+  {
+    id: 5,
+    img: mobilescreen6,
+  },
+  {
+    id: 6,
+    img: mobilescreen7,
+  },
+  {
+    id: 7,
+    img: mobilescreen8,
+  },
+  {
+    id: 8,
+    img: mobilescreen9,
+  },
+  {
+    id: 9,
+    img: mobilescreen10,
   },
 ];
 

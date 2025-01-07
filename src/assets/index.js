@@ -1,5 +1,15 @@
 import pcLogo from "./PClogofull.svg";
 import pcLogo1 from "./PClogo.webp";
+import mobilescreen1 from "./mobile/mobilescreen1.webp";
+import mobilescreen2 from "./mobile/mobilescreen2.webp";
+import mobilescreen3 from "./mobile/mobilescreen3.webp";
+import mobilescreen4 from "./mobile/mobilescreen4.webp";
+import mobilescreen5 from "./mobile/mobilescreen5.webp";
+import mobilescreen6 from "./mobile/mobilescreen6.webp";
+import mobilescreen7 from "./mobile/mobilescreen7.webp";
+import mobilescreen8 from "./mobile/mobilescreen8.webp";
+import mobilescreen9 from "./mobile/mobilescreen9.webp";
+import mobilescreen10 from "./mobile/mobilescreen10.webp";
 import imgDesign1 from "./img-design1.png";
 import imgDesign2 from "./img-design2.png";
 import heroImg1 from "./hero/ForPrepCohort1.webp";
@@ -50,6 +60,16 @@ import testimonialImg3 from "./testimonial-2-author-3-1.webp";
 export {
   heroImg1,
   schoolbannerImg,
+  mobilescreen1,
+  mobilescreen2,
+  mobilescreen3,
+  mobilescreen4,
+  mobilescreen5,
+  mobilescreen6,
+  mobilescreen7,
+  mobilescreen8,
+  mobilescreen9,
+  mobilescreen10,
   testimonialImg1,
   testimonialImg2,
   testimonialImg3,
