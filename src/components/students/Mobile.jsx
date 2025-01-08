@@ -2,10 +2,27 @@ import { appstoreImg, playstoreImg } from "../../assets";
 import { layout } from "../../style";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { mobile } from "../../constant";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 const Mobile = () => {
+  const sliderRef = useRef(null);
+  const PrevArrow = ({ onClick }) => (
+    <div
+      onClick={onClick}
+      className="cursor-pointer text-[18px] bg-[#F1F2FD] text-primary w-[50px] h-[50px] inline-block text-center leading-[35px] p-2 rounded-full shadow-md hover:bg-primary hover:text-white transition-colors duration-500 mx-2">
+      <FontAwesomeIcon icon={faArrowLeft} />
+    </div>
+  );
+  const NextArrow = ({ onClick }) => (
+    <div
+      onClick={onClick}
+      className="cursor-pointer text-[18px] bg-[#F1F2FD] text-primary w-[50px] h-[50px] inline-block text-center leading-[35px] p-2 rounded-full shadow-md hover:bg-primary hover:text-white transition-colors duration-500 mx-2">
+      <FontAwesomeIcon icon={faArrowRight} />
+    </div>
+  );
   const [Slider, setSlider] = useState(null);
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -16,7 +33,7 @@ const Mobile = () => {
   }, []);
 
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 2000,
     slidesToShow: 4,
@@ -52,8 +69,8 @@ const Mobile = () => {
   if (!Slider) return null;
 
   return (
-    <section className={`${layout.section} bg-bg-m`}>
-      <div className={layout.container}>
+    <section className={`${layout.section} 0.5xl:pb-6 bg-bg-m`}>
+      <div className={`${layout.container} pb-2`}>
         <h3 className="font-workSans font-bold text-[30px] 0.5xl:text-start text-center 0.5xl:leading-[26px] leading-[35px] text-[#31265a] mb-[21px]">
           Download the Prepcohort Mobile App
         </h3>
@@ -106,19 +123,25 @@ const Mobile = () => {
             </div>
           </div>
         </div>
-        <Slider {...settings}>
-          {mobile.map((item) => (
-            <div key={item.id} className="flex justify-center items-center">
-              <div className="w-[250px] mx-auto h-auto overflow-hidden rounded-xl shadow-xl">
-                <img
-                  src={item.img}
-                  alt="screenshot of mobile app"
-                  className="w-full h-auto"
-                />
+        <div className="relative">
+          <Slider {...settings} ref={sliderRef}>
+            {mobile.map((item) => (
+              <div key={item.id} className="flex justify-center items-center">
+                <div className="w-[250px] mx-auto h-auto overflow-hidden rounded-xl shadow-xl">
+                  <img
+                    src={item.img}
+                    alt="screenshot of mobile app"
+                    className="w-full h-auto"
+                  />
+                </div>
               </div>
-            </div>
-          ))}
-        </Slider>
+            ))}
+          </Slider>
+          <div className="relative flex justify-center pt-4 z-20">
+            <PrevArrow onClick={() => sliderRef.current.slickPrev()} />
+            <NextArrow onClick={() => sliderRef.current.slickNext()} />
+          </div>
+        </div>
       </div>
     </section>
   );

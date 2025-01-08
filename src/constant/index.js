@@ -11,6 +11,7 @@ import {
   jambImg,
   mobilescreen1,
   mobilescreen10,
+  mobilescreen11,
   mobilescreen2,
   mobilescreen3,
   mobilescreen4,
@@ -134,6 +135,10 @@ export const mobile = [
   {
     id: 9,
     img: mobilescreen10,
+  },
+  {
+    id: 10,
+    img: mobilescreen11,
   },
 ];
 

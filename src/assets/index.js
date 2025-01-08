@@ -10,6 +10,7 @@ import mobilescreen7 from "./mobile/mobilescreen7.webp";
 import mobilescreen8 from "./mobile/mobilescreen8.webp";
 import mobilescreen9 from "./mobile/mobilescreen9.webp";
 import mobilescreen10 from "./mobile/mobilescreen10.webp";
+import mobilescreen11 from "./mobile/mobilescreen11.webp";
 import imgDesign1 from "./img-design1.png";
 import imgDesign2 from "./img-design2.png";
 import heroImg1 from "./hero/ForPrepCohort1.webp";
@@ -70,6 +71,7 @@ export {
   mobilescreen8,
   mobilescreen9,
   mobilescreen10,
+  mobilescreen11,
   testimonialImg1,
   testimonialImg2,
   testimonialImg3,
