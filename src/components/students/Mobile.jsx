@@ -109,7 +109,7 @@ const Mobile = () => {
         <Slider {...settings}>
           {mobile.map((item) => (
             <div key={item.id} className="flex justify-center items-center">
-              <div className="w-[230px] 0.5xl:w-[250px] xl:w-[200px] mx-auto h-auto overflow-hidden rounded-xl shadow-xl">
+              <div className="w-[250px] mx-auto h-auto overflow-hidden rounded-xl shadow-xl">
                 <img
                   src={item.img}
                   alt="screenshot of mobile app"
